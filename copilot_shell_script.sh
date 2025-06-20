@@ -10,15 +10,18 @@ while true; do
     input=$(echo "$input" | tr '[:upper:]' '[:lower:]')
     if [ -z "$input" ]; then
         echo "Assignment name cannot be empty. Please try again."
-        continue
+    fi
+    if cut -d',' -f2 "$submission_file" | tr '[:upper:]' '[:lower:]' | sed 's/^ *//; s/ *$//' | grep -Fxq "$input"; then
 
+	echo "'$input' assignment found in '$submission_file'"
+        break
     else
-       break
+        echo "Entered a wrong assignment name, try again"
     fi
 done
 
 #change assignment to input in config file
-sed -i "s/ASSIGNMENT=.*/ASSIGNMENT=\"${input}\" /" "$config_file"
+sed -i "s/^ASSIGNMENT=\".*\"/ASSIGNMENT=\"$input\"/" "$config_file"
 echo "Changed assignement name to \"$input\" in $config_file"
 echo ".........✅ HELP✅..................
 1.cat ${directory}/config/config.env file to see updated assignment

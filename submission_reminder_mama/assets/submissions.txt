@@ -1,0 +1,13 @@
+student, assignment, submission status
+Chinemerem, Shell Navigation, not submitted
+Chiagoziem, Git, submitted
+Divine, Shell Navigation, not submitted
+Anissa, Shell Basics, submitted
+Kevine, Shell permissions , submitted
+Esther, Shell Scripting , not submitted
+Kwizera, Alu project , not submitted
+Alex , Git , Submitted
+Nana , Shell variables , submitted
+Shakilla , Python Quiz , not submitted
+Morris , SLTD assignment , not submitted
+Icyeza, Mission video , submitted
